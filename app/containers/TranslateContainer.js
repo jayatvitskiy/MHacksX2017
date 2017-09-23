@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 import TranslateWriteComponent from '../components/TranslateWriteComponent';
 import TranslateImageComponent from '../components/TranslateImageComponent';

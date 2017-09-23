@@ -4559,7 +4559,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
             // Open the picker and adjust the root “focused” state
             on( 'focus.toOpen', handleFocusToOpenEvent ).
 
-            // If there’s a click on an actionable element, carry out the actions.
+            // If there’s a click on an actionable element, carry out the constants.
             on( 'click', '[data-pick], [data-nav], [data-clear], [data-close]', function() {
 
                 var $target = $( this ),

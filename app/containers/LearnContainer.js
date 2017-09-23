@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 import LearnButtonsComponent from "../components/LearnButtonsComponent";
 import LearnCameraComponent from "../components/LearnCameraComponent";

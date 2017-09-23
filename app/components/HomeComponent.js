@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 export default class HomeComponent extends React.Component {
     render() {

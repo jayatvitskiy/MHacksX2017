@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 export default class PracticeComponent extends React.Component {
     render() {

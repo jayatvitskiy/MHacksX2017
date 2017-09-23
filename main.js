@@ -1,10 +1,8 @@
 $(document).ready(function(){ // on page load
 
-  $('.slider').slider({full_width: true}); // make slider on 'Home' page take up the entire width of the page
-
-  var image = document.getElementById('image'); // image displayed on 'Learn' page
-  var translatebox = document.getElementById('translatebox'); // input box on 'Translate' page
-  var translateimg = document.getElementById('translateimg'); // image(s) displayed on 'Translate' page
+  let image = document.getElementById('image'); // image displayed on 'Learn' page
+  let translatebox = document.getElementById('translatebox'); // input box on 'Translate' page
+  let translateimg = document.getElementById('translateimg'); // image(s) displayed on 'Translate' page
 
   $('a').click(function(event){ // if a button defined with <a></a> tags is clicked
 
@@ -22,9 +20,9 @@ $(document).ready(function(){ // on page load
 
     if ($(event.target).attr('id') === "translate") { // double checking that it is the 'Translate' button on the 'Translate' page
       translateimg.innerHTML = ""; // clear displayed images first
-      var chars = translatebox.value.toUpperCase().replace(/\s+/g, ''); // take input from input box, convert all letters to uppercase, remove all whitespace
+      let chars = translatebox.value.toUpperCase().replace(/\s+/g, ''); // take input from input box, convert all letters to uppercase, remove all whitespace
       if (chars.match(/^[a-zA-Z0-9]+$/i)) { // if input string consists only of alphanumeric characters
-   			for (var i = 0, len = chars.length; i < len; i++) { // loop through each character in the string
+   			for (let i = 0, len = chars.length; i < len; i++) { // loop through each character in the string
           translateimg.innerHTML += "<img src='pngs edited/" + chars.charAt(i) + ".PNG' width='300px' height='300px'>"; // display corresponding picture file
 			  }
 	      $(translatebox).val(''); // clear input box

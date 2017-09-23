@@ -4,7 +4,6 @@ export default class HomeComponent extends React.Component {
     render() {
         return (
             <div id="home" className="col s12">
-                <br/><br/><br/><br/><br/>
                 <div className="slider">
                     <ul className="slides">
                         <li>
@@ -43,10 +42,7 @@ export default class HomeComponent extends React.Component {
                         </li>
                     </ul>
                 </div>
-                <div className="row">
-                </div>
-                <div className="row">
-                </div>
+                <br/>
             </div>
         );
     };

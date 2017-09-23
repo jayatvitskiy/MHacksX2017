@@ -27,6 +27,11 @@ a.btn {
   border: 1px dashed #f50057;
   margin: 0 auto; /* forced centered hoirzontal alignment */
 }
+#footer {
+  position:fixed;
+  bottom:0;
+  width: 100%;
+}
 #translatebox:focus {
   border-bottom: 1px solid #f50057; /* setting border */
   -webkit-box-shadow: 0 1px 0 0 #f50057; /* for Safari browser */

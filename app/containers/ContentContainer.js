@@ -1,9 +1,6 @@
-import HomeComponent from "../components/HomeComponent";
-
 const React = require('react');
 
-import TitleComponent from '../components/TitleComponent.js';
-import TabComponent from '../components/TabComponent.js';
+import HomeComponent from "../components/HomeComponent";
 import LearnComponent from "../components/LearnComponent";
 import PracticeComponent from "../components/PracticeComponent";
 import TranslateComponent from "../components/TranslateComponent";

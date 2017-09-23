@@ -4,7 +4,6 @@ export default class LearnComponent extends React.Component {
     render() {
         return (
             <div id="learn" className="col s12">
-                <br/><br/>
                 <div className="row">
                     <div className="col s1"><a className="waves-effect waves-light btn pink accent-3" id="A" href = "/learnScript/A">A</a></div>
                     <div className="col s1"><a className="waves-effect waves-light btn pink accent-3" id="B" href = "/learnScript/B">B</a></div>
@@ -48,7 +47,6 @@ export default class LearnComponent extends React.Component {
                     <div className="col s1"><a className="waves-effect waves-light btn indigo" id="9" href = "/learnScript/9">9</a></div>
 
                 </div>
-                <br/><br/>
                 <div className="row">
                     <div className="col s6" id="image">
                         <img src="../pngs%20edited/A.PNG" width="450px" height="450px"/>
@@ -66,15 +64,11 @@ export default class LearnComponent extends React.Component {
                             <br/>
                             <div>It is also recommended that your hand take up as much</div>
                             <div>of the white outlined box in the webcam feed as possible.</div>
-                            <div></div>
-                            <br/><br/>
                             <button className="btn waves-effect waves-light indigo" type="submit" name="submit">Learn
                                 <i className="material-icons right">send</i>
                             </button>
                         </form>
                     </div>
-                </div>
-                <div className="row">
                 </div>
             </div>
         );

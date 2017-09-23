@@ -1,10 +1,13 @@
 const React = require('react');
 
-export default class PracticeComponent extends React.Component {
+export default class LearnCameraComponent extends React.Component {
     render() {
         return (
-            <div id="practice" className="col s12">
-                <div className="row">
+            <div className="row">
+                <div className="col s6" id="image">
+                    <img src="../pngs%20edited/A.PNG" width="450px" height="450px"/>
+                </div>
+                <div className="col s6">
                     <form method="POST" action="/runScript" className="learn">
                         <br/><br/><br/><br/>
                         <div>You will need a webcam feed in order for the computer to</div>
@@ -17,8 +20,8 @@ export default class PracticeComponent extends React.Component {
                         <br/>
                         <div>It is also recommended that your hand take up as much</div>
                         <div>of the white outlined box in the webcam feed as possible.</div>
-                        <br/><br/>
-                        <button className="btn waves-effect waves-light indigo" type="submit" name="submit">Practice
+                        <br/>
+                        <button className="btn waves-effect waves-light indigo" type="submit" name="submit">Learn
                             <i className="material-icons right">send</i>
                         </button>
                     </form>

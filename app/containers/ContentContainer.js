@@ -1,18 +1,19 @@
 const React = require('react');
 
+import LearnContainer from "./LearnContainer";
+import TranslateContainer from "./TranslateContainer";
+
 import HomeComponent from "../components/HomeComponent";
-import LearnComponent from "../components/LearnComponent";
 import PracticeComponent from "../components/PracticeComponent";
-import TranslateComponent from "../components/TranslateComponent";
 
 export default class TitleContainer extends React.Component {
     render() {
         return (
             <div>
                 <HomeComponent/>
-                <LearnComponent/>
+                <LearnContainer/>
                 <PracticeComponent/>
-                <TranslateComponent/>
+                <TranslateContainer/>
             </div>
         );
     };

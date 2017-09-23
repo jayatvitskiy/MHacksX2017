@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSSample</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+<body>
+    
+
+<script type="text/javascript">
+    $(function() {
+        Operation videoOperation;
+        using (var fs = new FileStream("videos/ASL.mp4", FileMode.Open))
+        {
+            videoOperation = await videoServiceClient.CreateOperationAsync(fs, OperationType.Stabilize);
+        }
+        var operationResult = await videoServiceClient.GetOperationResultAsync(videoOperation);
+        OperationResult operationResult;
+        while (true)
+        {
+              operationResult = await videoServiceClient.GetOperationResultAsync(videoOperation);
+              if (operationResult.Status == OperationStatus.Succeeded || operationResult.Status == OperationStatus.Failed)
+              {
+                   break;
+              }
+
+              Task.Delay(30000).Wait();
+        }
+        
+        var videoStream = await videoServiceClient.GetResultVideoAsync(resultUrl);
+        using (var fileStream = File.Create(outputFile))
+        {
+              videoStream.CopyTo(fileStream);
+        }
+        var text = document.getElementById("mistake");
+
+
+        var motionDetectionJsonString = operationResult.ProcessingResult;
+        var motionDetection = JsonConvert.DeserializeObject<MotionDetectionResult>(motionDetectionJsonString, settings);
+        /*
+        var params = {
+            // Request parameters
+            "text": text.textContent,
+            "mode": "spell",
+            //"preContextText": "{string}",
+            //"postContextText": "{string}",
+            //"mkt": "{string}",
+        };
+      
+        $.ajax({
+            url: "https://api.cognitive.microsoft.com/bing/v5.0/spellcheck/?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","5a4bc2fe1d9b4bbf87a708293233867f");
+            },
+            type: "GET",
+            // Request body
+            //data: "{body}",
+            
+        })
+        
+        .done(function(data) {
+            text.innerHTML=(data["flaggedTokens"][0]["suggestions"][0]["suggestion"]);
+        })
+        .fail(function() {
+            alert("fail");
+        });*/
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> <!-- resize content based on screen size -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" type="text/javascript"></script> <!-- jQuery -->
+      
+    </head>
+    <script>
+    $(document).ready(function(){
+        
+        $('a').click(function(event){ // if a button defined with <a></a> tags is clicked
+
+    if ($(event.target).attr('class') === "waves-effect waves-light btn pink accent-3" || $(event.target).attr('class') === "waves-effect waves-light btn indigo") { // if button is on 'Learn' page
+      image.innerHTML = "<img src='pngs edited/" + event.target.id + ".PNG' width='450px' height='450px'>"; // change displayed image based on button clicked
+    } else if ($(event.target).attr('class') === "waves-effect waves-indigo btn-flat") { // if button is 'Clear Message' on 'Translate' page
+      $(translatebox).val(''); // clear input box
+      translateimg.innerHTML = ""; // clear displayed images
+      Materialize.toast('Message cleared.', 2000); // toast alert lasting for 2 seconds
+    }
+
+  });
+});
+    </script>
+  
+    <body>
+        <div class="row">
+            <div class="col s6" id="image"> <!-- displayed image that changes with button click -->
+              <img src="pngs%20edited/A.PNG" width="450px" height="450px">
+            </div>
+            <div class="col s6">
+              <form method="POST" action="/runScript" class="learn">
+                <br><br><br><br> <!-- forcing middle vertical alignment manually -->
+                <div>You will need a webcam feed in order for the computer to</div> <!-- instructions to user -->
+                <div>recognize your gestures so that you can begin learning ASL.</div>
+                <br>
+                <div>Please click the button below to open the webcam feed.</div>
+                <br>
+                <div>It is recommended that you resize the feed</div>
+                <div>window to fit within the contours of this box.</div>
+                <br>
+                <div>It is also recommended that your hand take up as much</div>
+                <div>of the white outlined box in the webcam feed as possible.</div>
+                <div></div>
+                <br><br>
+                <!-- 'Learn' button triggers the Python program that lets the user learn the various signs -->
+                <button class="btn waves-effect waves-light indigo" type="submit" name="submit">Learn
+                  <i class="material-icons right">send</i>
+                </button>
+              </form>
+            </div>
+          </div>
+    </body>
+</html>

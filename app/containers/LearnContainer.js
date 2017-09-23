@@ -14,7 +14,7 @@ export default class LearnContainer extends React.Component {
     render() {
         return (
             <div id="learn" className="col s12">
-                <LearnButtonsComponent/>
+                <LearnButtonsComponent submitDisable={()=>{}}/>
                 <LearnCameraComponent/>
             </div>
         );

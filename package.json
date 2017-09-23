@@ -1,0 +1,32 @@
+{
+  "name": "mhacks",
+  "version": "1.0.0",
+  "description": "TSA 2016 project for Software Development.",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayatvitskiy/MHacksX2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayatvitskiy/MHacksX2017/issues"
+  },
+  "homepage": "https://github.com/jayatvitskiy/MHacksX2017#readme",
+  "dependencies": {
+    "cognitive-services": "^0.2.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1"
+  }
+}

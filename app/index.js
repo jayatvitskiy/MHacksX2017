@@ -1,4 +1,5 @@
-let React = require('react');
-let ReactDOM = require('react-dom');
-let App = require('./components/App');
+const React = require('react');
+const ReactDOM = require('react-dom');
+import App from './containers/MainContainer.js';
 
+ReactDOM.render(<App/>, document.getElementById('app'));

@@ -3,28 +3,40 @@ import React from 'react';
 export default class LearnCameraComponent extends React.Component {
     render() {
         return (
-            <div className="row">
-                <div className="col s6" id="image">
-                    <img src="../pngs%20edited/A.PNG" width="450px" height="450px"/>
+            <div>
+                <br/>
+                <div className="row">
+                    <div className="col s6" id="image">
+                        <img src="pngs edited/A.png" width="450px" height="450px"/>
+                    </div>
+                    <div className="col s6">
+                        <div className="chip pink accent-3 white-text chipLearn">get
+                            ready in
+                        </div>
+                        <div className="chip chip1 chipLearn" id="chip1">
+                            one
+                        </div>
+                        <div className="chip chip2 chipLearn" id="chip2">
+                            two
+                        </div>
+                        <div className="chip chip3 chipLearn" id="chip3">
+                            three
+                        </div>
+                        <div className="chip chip4 chipLearn" id="chip4">
+                            four
+                        </div>
+                        <div className="chip chip5 chipLearn" id="chip5">
+                            five
+                        </div>
+                        <div className="camera">
+                            <div id="response1"/>
+                            <div className="mybox2" id="box"/>
+                            <video id="forVid1" loop autoPlay height="400px" width="600px"/>
+                        </div>
+                        <canvas id="canvas"/>
+                    </div>
                 </div>
-                <div className="col s6">
-                    <form method="POST" action="/runScript" className="learn">
-                        <br/><br/><br/><br/>
-                        <div>You will need a webcam feed in order for the computer to</div>
-                        <div>recognize your gestures so that you can begin learning ASL.</div>
-                        <br/>
-                        <div>Please click the button below to open the webcam feed.</div>
-                        <br/>
-                        <div>It is recommended that you resize the feed</div>
-                        <div>window to fit within the contours of this box.</div>
-                        <br/>
-                        <div>It is also recommended that your hand take up as much</div>
-                        <div>of the white outlined box in the webcam feed as possible.</div>
-                        <br/>
-                        <button className="btn waves-effect waves-light indigo" type="submit" name="submit">Learn
-                            <i className="material-icons right">send</i>
-                        </button>
-                    </form>
+                <div className="row">
                 </div>
             </div>
         );

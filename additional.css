@@ -24,7 +24,7 @@ a.btn {
 .learn { /* for the 2 boxes on the 'Learn' and 'Practice' pages */
   width: 550px;
   height: 450px;
-  border: 1px dashed #f50057;
+  border: 1px dashed #ef5350;
   margin: 0 auto; /* forced centered hoirzontal alignment */
 }
 #footer {
@@ -33,14 +33,92 @@ a.btn {
   width: 100%;
 }
 #translatebox:focus {
-  border-bottom: 1px solid #f50057; /* setting border */
-  -webkit-box-shadow: 0 1px 0 0 #f50057; /* for Safari browser */
-  -moz-box-shadow: 0 1px 0 0 #f50057; /* for Mozilla Firefox browser */
-  box-shadow: 0 1px 0 0 #f50057; /* changing default Materialize colors */
+  border-bottom: 1px solid #ef5350; /* setting border */
+  -webkit-box-shadow: 0 1px 0 0 #ef5350; /* for Safari browser */
+  -moz-box-shadow: 0 1px 0 0 #ef5350; /* for Mozilla Firefox browser */
+  box-shadow: 0 1px 0 0 #ef5350; /* changing default Materialize colors */
 }
 #translatebox:focus + label {
-  color: #f50057; /* changing default Materialize colors */
+  color: #ef5350; /* changing default Materialize colors */
 }
 .input-field .prefix.active {
-  color: #f50057; /* changing default Materialize colors */
+  color: #ef5350; /* changing default Materialize colors */
+}
+
+.chipPractice {
+  z-index: 2;
+  position: relative;
+  top: 45px;
+}
+
+.chipLearn {
+  z-index: 2;
+  position: relative;
+  top: -5px;
+  right: 75px
+}
+
+#letterdiv {
+  position:relative;
+  z-index:2;
+  top: 90px;
+  color: white;
+  height: 0;
+}
+
+#response {
+  z-index: 3;
+  position: relative;
+  color: white;
+  right: 55px;
+  height: 0;
+  top: 0;
+}
+
+#response2 {
+  position: relative;
+  z-index: 2;
+  top: 110px;
+  color: white;
+  height: 0;
+}
+
+.mybox {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #ef5350;
+  z-index: 3;
+  position:relative;
+  top:270px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mybox2 {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #f50057;
+  z-index: 3;
+  position: relative;
+  top: 155px;
+  left: 42%;
+  transform: translate(-50%, -50%)
+}
+
+#forVid1 {
+  z-index: 1;
+  position:relative;
+  top: -249px;
+  right: 75px
+}
+
+#forVid2 {
+  position:relative;
+  top: -133px;
+}
+
+.practice-btn {
+  position:relative;
+  top: -250px;
+  width: 109px;
 }

@@ -14,8 +14,10 @@ export default class LearnContainer extends React.Component {
     render() {
         return (
             <div id="learn" className="col s12">
-                <LearnButtonsComponent submitDisable={()=>{}}/>
-                <LearnCameraComponent/>
+                <form method="POST" onSubmit={this.props.submitImage()}>
+                    <LearnButtonsComponent submitDisable={() => {}}/>
+                    <LearnCameraComponent/>
+                </form>
             </div>
         );
     };

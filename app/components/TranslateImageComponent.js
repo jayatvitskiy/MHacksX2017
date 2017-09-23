@@ -11,7 +11,7 @@ export default class TranslateComponent extends React.Component {
                         </button>
                     </div>
                     <div className="col s3 push-s3">
-                        <a className="waves-effect waves-indigo btn-flat">Clear Message</a>
+                        <a id="clear-message" className="waves-effect waves-indigo btn-flat">Clear Message</a>
                     </div>
                 </div>
                 <br/><br/>

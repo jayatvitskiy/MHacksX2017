@@ -23,7 +23,6 @@ export default class LearnContainer extends React.Component {
         let timer5 = null;
         let responseDiv3 = null;
         let responseDiv = null;
-        let letterDiv = null;
 
         if (disabled === false) {
             responseDiv3 = document.getElementById("response2");
@@ -50,33 +49,8 @@ export default class LearnContainer extends React.Component {
                 return data;
             }
 
-            if (letter === "Practice") {
-                responseDiv = $('#response2');
-                letterDiv = $('#letterdiv');
-            } else {
-                responseDiv = this.refs.response1;
-            }
+            responseDiv = this.refs.response1;
             let video = this.refs.video;
-
-            if (letter === "Practice") {
-                letterDiv.innerHTML = ('Please make the character ' + rand + '.');
-                timer1 = setTimeout(function () {
-                    $('#chip6').addClass('indigo white-text');
-                }, 1000);
-                timer2 = setTimeout(function () {
-                    $('#chip7').addClass('indigo white-text');
-                }, 2000);
-                timer3 = setTimeout(function () {
-                    $('#chip8').addClass('indigo white-text');
-                }, 3000);
-                timer4 = setTimeout(function () {
-                    $('#chip9').addClass('indigo white-text');
-                }, 4000);
-                timer5 = setTimeout(function () {
-                    $('#chip10').addClass('indigo white-text');
-                }, 5000);
-            } else {
-                responseDiv.innerHTML = ('Please make the character ' + letter + '.');
                 timer1 = setTimeout(function () {
                     $('#chip1').addClass('indigo white-text');
                 }, 1000);
@@ -92,7 +66,6 @@ export default class LearnContainer extends React.Component {
                 timer5 = setTimeout(function () {
                     $('#chip5').addClass('indigo white-text');
                 }, 5000);
-            }
             let canvas = this.refs.canvas;
             setTimeout(function () {
                 let context = canvas.getContext('2d');
@@ -135,7 +108,6 @@ export default class LearnContainer extends React.Component {
 
     loading() {
         let video = this.refs.video;
-        console.log(video);
         navigator.mediaDevices.getUserMedia({
             video: true
         }, function () {

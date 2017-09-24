@@ -137,10 +137,6 @@ export default class PracticeContainer extends React.Component {
             context.fillStyle = "#FFFFFF";
             context.fillRect(0, 0, canvas.width, canvas.height);
 
-            console.log(canvas);
-            console.log(canvas.width);
-            console.log(canvas.height);
-
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
             let data = canvas.toDataURL('image/jpeg', 1);
@@ -202,7 +198,27 @@ export default class PracticeContainer extends React.Component {
         return (
             <div id="practice" className="col s12">
                 <PracticeReadyComponent/>
-                <PracticeCameraComponent startCount={this.startCount()}/>
+                <div className="row">
+                    <div ref="letterdiv" id="letterdiv"/>
+                    <div ref"response2" id="response2"/>
+                    <div className="mybox"/>
+                    <div className="camera">
+                        <video ref="video" className="forVid2" loop autoPlay height="400px" width="600px"/>
+                    </div>
+                    <canvas id="canvas"/>
+                </div>
+                <div className="row">
+                    <div className="col s3 push-s4">
+                        <button className="btn waves-effect waves-light indigo practice-btn" id="practicebtn"
+                                onClick={()=>{this.startCount()}}>Start
+                        </button>
+                    </div>
+                    <div className="col s3 push-s2">
+                        <button className="btn waves-effect waves-light pink accent-3 practice-btn" id="endpracticebtn"
+                                onClick="">End
+                        </button>
+                    </div>
+                </div>
             </div>
         );
     };

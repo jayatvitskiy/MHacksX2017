@@ -176,18 +176,15 @@ export default class LearnContainer extends React.Component {
                                 five
                             </div>
                             <div className="camera">
-                                <div ref="response1" id="response1"/>
+                                <Webcam
+                                    audio={false}
+                                    height={400}
+                                    ref="webcamp"
+                                    screenshotFormat="image/jpeg"
+                                    width={600}
+                                />
                                 <div className="mybox2" id="box"/>
-                                <video ref="video" id="forVid1" loop autoPlay height="400px" width="600px"/>
-                                <canvas ref="canvas" id="canvas" width={600} height={400}/>
                             </div>
-                            <Webcam
-                                audio={false}
-                                height={400}
-                                ref="webcamp"
-                                screenshotFormat="image/jpeg"
-                                width={600}
-                            />
                         </div>
                     </div>
                 </form>

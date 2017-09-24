@@ -200,7 +200,7 @@ export default class PracticeContainer extends React.Component {
                 <PracticeReadyComponent/>
                 <div className="row">
                     <div ref="letterdiv" id="letterdiv"/>
-                    <div ref"response2" id="response2"/>
+                    <div ref="response2" id="response2"/>
                     <div className="mybox"/>
                     <div className="camera">
                         <video ref="video" className="forVid2" loop autoPlay height="400px" width="600px"/>

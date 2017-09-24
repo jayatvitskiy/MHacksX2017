@@ -1,4 +1,5 @@
 import React from 'react';
+import Webcam from 'react-webcam';
 
 import LearnButtonsComponent from "../components/LearnButtonsComponent";
 
@@ -134,6 +135,7 @@ export default class LearnContainer extends React.Component {
 
     loading() {
         let video = this.refs.video;
+        console.log(video);
         navigator.mediaDevices.getUserMedia({
             video: true
         }, function () {
@@ -207,6 +209,13 @@ export default class LearnContainer extends React.Component {
                                 <video ref="video" id="forVid1" loop autoPlay height="400px" width="600px"/>
                                 <canvas ref="canvas" id="canvas" width={600} height={400}/>
                             </div>
+                            <Webcam
+                                audio={false}
+                                height={400}
+                                ref="webcamp"
+                                screenshotFormat="image/jpeg"
+                                width={600}
+                            />
                         </div>
                     </div>
                 </form>

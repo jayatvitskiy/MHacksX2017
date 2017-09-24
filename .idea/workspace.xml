@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="498e215c-aca6-4f0e-b198-49966a93d46a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/LearnCameraComponent.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/PracticeCameraComponent.js" afterPath="$PROJECT_DIR$/app/components/PracticeCameraComponent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/LearnContainer.js" afterPath="$PROJECT_DIR$/app/containers/LearnContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/PracticeContainer.js" afterPath="$PROJECT_DIR$/app/containers/PracticeContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,10 +20,10 @@
         <entry file="file://$PROJECT_DIR$/app/containers/LearnContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="478">
-              <caret line="207" column="65" lean-forward="true" selection-start-line="207" selection-start-column="65" selection-end-line="207" selection-end-column="65" />
+              <caret line="216" column="42" lean-forward="false" selection-start-line="216" selection-start-column="42" selection-end-line="216" selection-end-column="42" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1506222672000" expanded="true" signature="5570:5601" ph="..." />
+                <marker date="1506223592000" expanded="true" signature="5633:5664" ph="..." />
               </folding>
             </state>
           </provider>
@@ -47,8 +42,8 @@
       <file leaf-file-name="PracticeContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/containers/PracticeContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="165" column="8" lean-forward="false" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+            <state relative-caret-position="30">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding>
                 <marker date="1506222608000" expanded="true" signature="1416:1447" ph="..." />
               </folding>
@@ -97,8 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ajax</find>
-      <find>submitimage</find>
       <find>disabled</find>
       <find>timer1</find>
       <find>timer</find>
@@ -118,7 +111,6 @@
       <find>#vid</find>
       <find>response</find>
       <find>response1</find>
-      <find>video</find>
       <find>vidfor</find>
       <find>learncamera</find>
       <find>console.log</find>
@@ -127,6 +119,9 @@
       <find>navigator</find>
       <find>please make the c</find>
       <find>canvas</find>
+      <find>video</find>
+      <find>auto</find>
+      <find>autoplay</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;br/&gt;</replace>
@@ -311,7 +306,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36784000" />
+    <option name="totallyTimeSpent" value="37391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -404,7 +399,7 @@
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1506222672000" expanded="true" signature="5570:5601" ph="..." />
+            <marker date="1506223592000" expanded="true" signature="5633:5664" ph="..." />
           </folding>
         </state>
       </provider>
@@ -461,7 +456,7 @@
           <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1506222672000" expanded="true" signature="5570:5601" ph="..." />
+            <marker date="1506223592000" expanded="true" signature="5633:5664" ph="..." />
           </folding>
         </state>
       </provider>
@@ -663,14 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/LearnButtonsComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137">
-          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/PracticeCameraComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -687,16 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/containers/PracticeContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="165" column="8" lean-forward="false" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
-          <folding>
-            <marker date="1506222608000" expanded="true" signature="1416:1447" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -705,13 +682,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/LearnButtonsComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/containers/PracticeContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding>
+            <marker date="1506222608000" expanded="true" signature="1416:1447" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/containers/LearnContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
-          <caret line="207" column="65" lean-forward="true" selection-start-line="207" selection-start-column="65" selection-end-line="207" selection-end-column="65" />
+          <caret line="216" column="42" lean-forward="false" selection-start-line="216" selection-start-column="42" selection-end-line="216" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1506222672000" expanded="true" signature="5570:5601" ph="..." />
+            <marker date="1506223592000" expanded="true" signature="5633:5664" ph="..." />
           </folding>
         </state>
       </provider>

@@ -109,6 +109,7 @@ export default class LearnContainer extends React.Component {
             <div id="learn" className="col s12">
                 <form method="POST" onSubmit={this.submitImage}>
                     <LearnButtonsComponent submitDisable={this.submitDisable.bind(this)}/>
+                    <br/>
                     <div className="row">
                         <div className="col s6" id="image">
                             <img src={"pngs edited/" + this.state.imgID + ".png"} width="450px" height="450px"/>
@@ -133,17 +134,13 @@ export default class LearnContainer extends React.Component {
                                 five
                             </div>
                             <div className="camera">
-                                <div className="mybox2" id="box">
                                     <Webcam
                                         audio={false}
-                                        height={400}
+                                        height={200}
                                         ref="webcam"
                                         screenshotFormat="image/jpeg"
-                                        width={600}
+                                        width={200}
                                     />
-                                </div>
-                                <video ref="video" className="forVid2" loop autoPlay height="400px" width="600px"/>
-                                <canvas ref="canvas" id="canvas"/>
                             </div>
                         </div>
                     </div>

@@ -127,27 +127,23 @@ export default class PracticeContainer extends React.Component {
 
     render() {
         return (
-            <div id="practice" className="col s12">
+            <div id="practice col s12">
                 <PracticeReadyComponent/>
+                <br/><br/>
                 <div className="row">
                     <div ref="letterdiv" id="letterdiv"/>
                     <div ref="response2" id="response2"/>
-                    <div className="mybox"/>
                     <Webcam
                         audio={false}
-                        height={400}
+                        height={200}
                         ref="webcam"
                         screenshotFormat="image/jpeg"
-                        width={600}
+                        width={200}
                     />
-                </div>
-                <div className="row">
-                    <div className="col s3 push-s4">
+                    <div className="row">
                         <button className="btn waves-effect waves-light indigo practice-btn" ref="practicebtn" id="practicebtn"
                                 onClick={()=>{this.startCount()}}>Start
                         </button>
-                    </div>
-                    <div className="col s3 push-s2">
                         <button className="btn waves-effect waves-light pink accent-3 practice-btn" id="endpracticebtn"
                                 onClick={()=>{this.restartPage()}}>End
                         </button>

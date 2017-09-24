@@ -135,10 +135,10 @@ export default class PracticeContainer extends React.Component {
                     <div ref="response2" id="response2"/>
                     <Webcam
                         audio={false}
-                        height={200}
+                        height={400}
                         ref="webcam"
                         screenshotFormat="image/jpeg"
-                        width={200}
+                        width={600}
                     />
                     <div className="row">
                         <button className="btn waves-effect waves-light indigo practice-btn" ref="practicebtn" id="practicebtn"

@@ -136,10 +136,10 @@ export default class LearnContainer extends React.Component {
                             <div className="camera">
                                     <Webcam
                                         audio={false}
-                                        height={200}
+                                        height={400}
                                         ref="webcam"
                                         screenshotFormat="image/jpeg"
-                                        width={200}
+                                        width={600}
                                     />
                             </div>
                         </div>

@@ -15,9 +15,11 @@ export default class MainContainer extends React.Component {
     render() {
         return (
             <div>
-                <TabContainer contentChange = {(newState)=>this.setState({currentState: newState})}/>
-                <ContentContainer currentState = {this.state.currentState}
-                loading = {this.loading} />
+                <div id="container">
+                    <TabContainer contentChange = {(newState)=>this.setState({currentState: newState})}/>
+                    <ContentContainer currentState = {this.state.currentState}
+                    loading = {this.loading} />
+                </div>
                 <FooterComponent/>
             </div>
         );

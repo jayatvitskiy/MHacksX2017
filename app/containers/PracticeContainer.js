@@ -5,6 +5,7 @@ import PracticeReadyComponent from '../components/PracticeReadyComponent';
 import PracticeCameraComponent from '../components/PracticeCameraComponent';
 
 let intervalID = 0;
+let rand = 'A';
 
 export default class PracticeContainer extends React.Component {
     constructor(props) {
@@ -14,7 +15,6 @@ export default class PracticeContainer extends React.Component {
     }
 
     submitImage(letter) {
-        let rand = 'a';
         let timer1 = null;
         let timer2 = null;
         let timer3 = null;
@@ -52,7 +52,7 @@ export default class PracticeContainer extends React.Component {
         responseDiv = this.refs.response2;
         letterDiv = this.refs.letterdiv;
 
-        letterDiv.innerHTML = ('Please make the character ' + rand + '.');
+        letterDiv.innerHTML = ('Please make the character ' + rand);
         timer1 = setTimeout(function () {
             $('#chip6').addClass('indigo white-text');
         }, 1000);
@@ -93,12 +93,12 @@ export default class PracticeContainer extends React.Component {
     startCount() {
         let alphaNumericArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", 'A', 'B', 'C', 'D', 'E', 'F', 'G',
             "H", 'I', "J", 'K', "L", "M", "N", "O", 'P', "Q", 'R', 'S', 'T', 'U', 'V', 'W', "X", 'Y', 'Z'];
-        let rand = alphaNumericArray[Math.floor(Math.random() * alphaNumericArray.length)];
+        rand = alphaNumericArray[Math.floor(Math.random() * alphaNumericArray.length)];
         let responseDiv3 = document.getElementById("response2");
         if (this.submitImage('Practice'))
         {
-            alphaNumericArray.splice(alphaNumericArray.indexOf(rand), 1); //if user made correct sign, remove rand from array
-            rand = alphaNumericArray[Math.floor(Math.random() * alphaNumericArray.length)]; //generate new rand
+            alphaNumericArray.splice(alphaNumericArray.indexOf(rand), 1);
+            rand = alphaNumericArray[Math.floor(Math.random() * alphaNumericArray.length)];
         }
         let ths = this;
         intervalID = setInterval(function() {

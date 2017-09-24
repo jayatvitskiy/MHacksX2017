@@ -6,7 +6,7 @@ export default class TabContainer extends React.Component {
             <div>
                 <nav className="top-nav red lighten-1">
                     <div className="nav-wrapper">
-                        <a className="title center">A Helping Hand</a>
+                        <a className="title center">The Helping Hand</a>
                     </div>
                 </nav>
             </div>

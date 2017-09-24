@@ -10,7 +10,7 @@ export default class HomeComponent extends React.Component {
                             <img src="http://cfile6.uf.tistory.com/image/2317924251A4B8BA31E3AF"/>
                             <div className="caption left-align">
                                 <br/><br/><br/>
-                                <h3>A Helping Hand</h3>
+                                <h3>The Helping Hand</h3>
                                 <h5 className="light grey-text text-lighten-3">A handy tool for novice American Sign Language learners</h5>
                             </div>
                         </li>

@@ -10,7 +10,7 @@ export default class TranslateContainer extends React.Component {
             $('#translateimage').innerHTML = "";
             Materialize.toast('Message cleared.', 2000);
         });
-        $('#translate').onclick(function() {
+        $('#translate').click(function(event) {
             const translateimg = document.getElementById('translateimg');
             const translatebox = document.getElementById('translatebox');
             translateimg.innerHTML = "";

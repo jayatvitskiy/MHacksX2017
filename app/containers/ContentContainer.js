@@ -21,8 +21,8 @@ export default class ContentContainer extends React.Component {
     render() {
         return (
             <div>
-                {this.props.currentState === HOME ? <HomeComponent/> : this.props.currentState === LEARN ? <LearnContainer submitImage={()=>{}}/> :
-                    this.props.currentState === PRACTICE ? <PracticeContainer/> : <TranslateContainer/>}
+                {this.props.currentState === HOME ? <HomeComponent/> : this.props.currentState === LEARN ? <LearnContainer/> :
+                    this.props.currentState === PRACTICE ? <PracticeContainer submitImage={this.props.submitImage}/> : <TranslateContainer/>}
             </div>
         );
     };

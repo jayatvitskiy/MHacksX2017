@@ -7,7 +7,7 @@ export default class LearnCameraComponent extends React.Component {
                 <br/>
                 <div className="row">
                     <div className="col s6" id="image">
-                        <img src="pngs edited/A.png" width="450px" height="450px"/>
+                        <img src={"pngs edited/" + this.props.imgID + ".png"} width="450px" height="450px"/>
                     </div>
                     <div className="col s6">
                         <div className="chip pink accent-3 white-text chipLearn">get
@@ -33,7 +33,7 @@ export default class LearnCameraComponent extends React.Component {
                             <div className="mybox2" id="box"/>
                             <video id="forVid1" loop autoPlay height="400px" width="600px"/>
                         </div>
-                        <canvas id="canvas"/>
+                        <canvas ref="canvas1" id="canvas1" width={600} height={400}/>
                     </div>
                 </div>
                 <div className="row">

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="498e215c-aca6-4f0e-b198-49966a93d46a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/LearnContainer.js" afterPath="$PROJECT_DIR$/app/containers/LearnContainer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/PracticeContainer.js" afterPath="$PROJECT_DIR$/app/containers/PracticeContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,43 +20,22 @@
       <file leaf-file-name="LearnContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/containers/LearnContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="184" column="34" lean-forward="false" selection-start-line="184" selection-start-column="34" selection-end-line="184" selection-end-column="34" />
+            <state relative-caret-position="388">
+              <caret line="138" column="47" lean-forward="false" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1506225028000" expanded="true" signature="4460:4491" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PracticeContainer.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PracticeContainer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/containers/PracticeContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="213" column="33" lean-forward="true" selection-start-line="213" selection-start-column="33" selection-end-line="213" selection-end-column="33" />
+            <state relative-caret-position="252">
+              <caret line="98" column="23" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="23" />
               <folding>
-                <marker date="1506224995000" expanded="true" signature="1416:1447" ph="..." />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,36 +82,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>forvid</find>
-      <find>src</find>
-      <find>video.src</find>
-      <find>fovid1</find>
-      <find>forvid1</find>
-      <find>componentdidupdate</find>
-      <find>console.l</find>
-      <find>div</find>
-      <find>#vid</find>
-      <find>response</find>
-      <find>response1</find>
-      <find>vidfor</find>
       <find>learncamera</find>
       <find>console.log(&quot;doge</find>
       <find>navigator</find>
       <find>please make the c</find>
-      <find>canvas</find>
       <find>video</find>
       <find>auto</find>
       <find>autoplay</find>
       <find>onclick</find>
       <find>please make the</find>
       <find>response2</find>
-      <find>console.log</find>
       <find>doge</find>
       <find>startCount</find>
       <find>this.props</find>
       <find>jquery</find>
       <find>ref&quot;</find>
       <find>mybox</find>
+      <find>canvas</find>
+      <find>this.loading</find>
+      <find>make the</find>
+      <find>please make the</find>
+      <find>enablepractice</find>
+      <find>stopcount()</find>
+      <find>canvas.width</find>
+      <find>this.submitimage</find>
+      <find>disabled</find>
+      <find>this.refs.practice</find>
+      <find>ths.refs</find>
+      <find>console.log</find>
+      <find>let ths = this</find>
+      <find>this.submit</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;br/&gt;</replace>
@@ -187,9 +164,9 @@
         <option value="$PROJECT_DIR$/app/components/LearnCameraComponent.js" />
         <option value="$PROJECT_DIR$/app/components/PracticeCameraComponent.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/app/containers/PracticeContainer.js" />
         <option value="$PROJECT_DIR$/app/containers/LearnContainer.js" />
-        <option value="$PROJECT_DIR$/main.css" />
       </list>
     </option>
   </component>
@@ -319,7 +296,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38512000" />
+    <option name="totallyTimeSpent" value="40062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -362,7 +339,7 @@
         <state relative-caret-position="90">
           <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
-            <marker date="1506224995000" expanded="true" signature="1416:1447" ph="..." />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -412,7 +389,6 @@
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1506225028000" expanded="true" signature="4460:4491" ph="..." />
           </folding>
         </state>
       </provider>
@@ -469,7 +445,6 @@
           <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1506225028000" expanded="true" signature="4460:4491" ph="..." />
           </folding>
         </state>
       </provider>
@@ -687,6 +662,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/PracticeCameraComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -695,32 +678,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/containers/PracticeContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="213" column="33" lean-forward="true" selection-start-line="213" selection-start-column="33" selection-end-line="213" selection-end-column="33" />
-          <folding>
-            <marker date="1506224995000" expanded="true" signature="1416:1447" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/containers/LearnContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="184" column="34" lean-forward="false" selection-start-line="184" selection-start-column="34" selection-end-line="184" selection-end-column="34" />
+        <state relative-caret-position="388">
+          <caret line="138" column="47" lean-forward="false" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1506225028000" expanded="true" signature="4460:4491" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
+    <entry file="file://$PROJECT_DIR$/app/containers/PracticeContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="252">
+          <caret line="98" column="23" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,51 +1,16 @@
 import React from 'react';
+import Webcam from 'react-webcam';
 
 import PracticeReadyComponent from '../components/PracticeReadyComponent';
 import PracticeCameraComponent from '../components/PracticeCameraComponent';
+
+let intervalID = 0;
 
 export default class PracticeContainer extends React.Component {
     constructor(props) {
         super(props);
         this.startCount = this.startCount.bind(this);
         this.submitImage = this.submitImage.bind(this);
-    }
-
-    loading()
-    {
-        let video = $('#forVid2');
-        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-        navigator.getUserMedia({
-            video: true
-        }, function() {
-        }, function() {
-            document.getElementById('practicebtn').style.visibility = 'hidden';
-            document.getElementById('endpracticebtn').style.visibility = 'hidden';
-            let chips = document.getElementsByClassName('chip');
-            for (let i = 0, il = chips.length; i < il; i++) {
-                chips[i].style.visibility = 'hidden';
-            }
-            let boxes = document.getElementsByClassName('mybox');
-            for (let i = 0, il = boxes.length; i < il; i++) {
-                boxes[i].style.visibility = 'hidden';
-            }
-            let responseDiv2 = document.getElementById('response2');
-            responseDiv2.innerHTML = '<div style="color:#f50057;font-weight:bold;">IMPORTANT!</div><br>You need a webcam to use this feature.<br><br>Please plug a webcam into your<br>computer and refresh the page.';
-            responseDiv2.style.color = 'black';
-        });
-        if (navigator.getUserMedia)
-        {
-            let thevid = {
-                video: true,
-                audio: false
-            };
-            navigator.getUserMedia(thevid, handleVideo, forError)
-        }
-        function handleVideo(localmediastream) {
-            video.src = window.URL.createObjectURL(localmediastream);
-        }
-
-        function forError(e) {
-        }
     }
 
     submitImage(letter) {
@@ -58,8 +23,9 @@ export default class PracticeContainer extends React.Component {
         let responseDiv3 = null;
         let responseDiv = null;
         let letterDiv = null;
+        this.refs.practicebtn.disabled = true;
 
-        responseDiv3 = document.getElementById("response2");
+        responseDiv3 = this.refs.response2;
         clearTimeout(timer1);
         clearTimeout(timer2);
         clearTimeout(timer3);
@@ -83,63 +49,29 @@ export default class PracticeContainer extends React.Component {
             return data;
         }
 
-        if (letter === "Practice") {
-            responseDiv = $('#response2');
-            letterDiv = $('#letterdiv');
-        } else {
-            responseDiv = $('#response');
-        }
-        let canvas = $('#canvas1');
-        let video = $('#forVid1');
+        responseDiv = this.refs.response2;
+        letterDiv = this.refs.letterdiv;
 
-        if (letter === "Practice") {
-            letterDiv.innerHTML = ('Please make the character ' + rand + '.');
-            timer1 = setTimeout(function () {
-                $('#chip6').addClass('indigo white-text');
-            }, 1000);
-            timer2 = setTimeout(function () {
-                $('#chip7').addClass('indigo white-text');
-            }, 2000);
-            timer3 = setTimeout(function () {
-                $('#chip8').addClass('indigo white-text');
-            }, 3000);
-            timer4 = setTimeout(function () {
-                $('#chip9').addClass('indigo white-text');
-            }, 4000);
-            timer5 = setTimeout(function () {
-                $('#chip10').addClass('indigo white-text');
-            }, 5000);
-        } else {
-            responseDiv.innerHTML = ('Please make the character ' + letter + '.');
-            timer1 = setTimeout(function () {
-                $('#chip1').addClass('indigo white-text');
-            }, 1000);
-            timer2 = setTimeout(function () {
-                $('#chip2').addClass('indigo white-text');
-            }, 2000);
-            timer3 = setTimeout(function () {
-                $('#chip3').addClass('indigo white-text');
-            }, 3000);
-            timer4 = setTimeout(function () {
-                $('#chip4').addClass('indigo white-text');
-            }, 4000);
-            timer5 = setTimeout(function () {
-                $('#chip5').addClass('indigo white-text');
-            }, 5000);
-        }
+        letterDiv.innerHTML = ('Please make the character ' + rand + '.');
+        timer1 = setTimeout(function () {
+            $('#chip6').addClass('indigo white-text');
+        }, 1000);
+        timer2 = setTimeout(function () {
+            $('#chip7').addClass('indigo white-text');
+        }, 2000);
+        timer3 = setTimeout(function () {
+            $('#chip8').addClass('indigo white-text');
+        }, 3000);
+        timer4 = setTimeout(function () {
+            $('#chip9').addClass('indigo white-text');
+        }, 4000);
+        timer5 = setTimeout(function () {
+            $('#chip10').addClass('indigo white-text');
+        }, 5000);
 
         let ths = this;
-
         setTimeout(function () {
-            let context = ths.refs.canvas.getContext('2d');
-            context.clearRect(0, 0, canvas.width, canvas.height);
-
-            context.fillStyle = "#FFFFFF";
-            context.fillRect(0, 0, canvas.width, canvas.height);
-
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-            let data = canvas.toDataURL('image/jpeg', 1);
+            let data = ths.refs.webcam.getScreenshot();
             let ajax = new XMLHttpRequest();
             ajax.open("POST", 'https://ensign.hthswd.org:8085/process_file', false);
             ajax.setRequestHeader('Content-Type', 'application/upload');
@@ -155,7 +87,7 @@ export default class PracticeContainer extends React.Component {
 
     enablePractice()
     {
-        document.getElementById('practicebtn').disabled = false;
+        this.refs.practicebtn.disabled = false;
     }
 
     startCount() {
@@ -163,14 +95,14 @@ export default class PracticeContainer extends React.Component {
             "H", 'I', "J", 'K', "L", "M", "N", "O", 'P', "Q", 'R', 'S', 'T', 'U', 'V', 'W', "X", 'Y', 'Z'];
         let rand = alphaNumericArray[Math.floor(Math.random() * alphaNumericArray.length)];
         let responseDiv3 = document.getElementById("response2");
-
+        console.log(this);
         if (this.submitImage('Practice'))
         {
             alphaNumericArray.splice(alphaNumericArray.indexOf(rand), 1); //if user made correct sign, remove rand from array
             rand = alphaNumericArray[Math.floor(Math.random() * alphaNumericArray.length)]; //generate new rand
         }
 
-        let intervalID = setInterval(function() {
+        intervalID = setInterval(function() {
             if ((responseDiv3.innerHTML) === "Correct.")
             {
                 alphaNumericArray.splice(alphaNumericArray.indexOf(rand), 1);
@@ -180,18 +112,18 @@ export default class PracticeContainer extends React.Component {
             if (alphaNumericArray !== null && alphaNumericArray.length >= 1) {
                 this.submitImage('Practice');
             } else {
-                this.stopCount(intervalID);
+                this.stopCount();
             }
         }, 8000);
     }
 
-    stopCount(intervalID) {
+    stopCount() {
         clearInterval(intervalID);
     }
 
-
-    componentDidMount() {
-        this.loading();
+    restartPage() {
+        this.enablePractice();
+        this.stopCount();
     }
 
     render() {
@@ -202,20 +134,23 @@ export default class PracticeContainer extends React.Component {
                     <div ref="letterdiv" id="letterdiv"/>
                     <div ref="response2" id="response2"/>
                     <div className="mybox"/>
-                    <div className="camera">
-                        <video ref="video" className="forVid2" loop autoPlay height="400px" width="600px"/>
-                    </div>
-                    <canvas id="canvas"/>
+                    <Webcam
+                        audio={false}
+                        height={400}
+                        ref="webcam"
+                        screenshotFormat="image/jpeg"
+                        width={600}
+                    />
                 </div>
                 <div className="row">
                     <div className="col s3 push-s4">
-                        <button className="btn waves-effect waves-light indigo practice-btn" id="practicebtn"
+                        <button className="btn waves-effect waves-light indigo practice-btn" ref="practicebtn" id="practicebtn"
                                 onClick={()=>{this.startCount()}}>Start
                         </button>
                     </div>
                     <div className="col s3 push-s2">
                         <button className="btn waves-effect waves-light pink accent-3 practice-btn" id="endpracticebtn"
-                                onClick="">End
+                                onClick={()=>{this.restartPage()}}>End
                         </button>
                     </div>
                 </div>

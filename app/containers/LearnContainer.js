@@ -10,7 +10,6 @@ export default class LearnContainer extends React.Component {
         super(props);
         this.submitDisable = this.submitDisable.bind(this);
         this.submitImage = this.submitImage.bind(this);
-        this.loading = this.loading.bind(this);
         this.state = {imgID: 'A'};
     }
 
@@ -50,7 +49,6 @@ export default class LearnContainer extends React.Component {
             }
 
             responseDiv = this.refs.response1;
-            let video = this.refs.video;
                 timer1 = setTimeout(function () {
                     $('#chip1').addClass('indigo white-text');
                 }, 1000);
@@ -66,17 +64,11 @@ export default class LearnContainer extends React.Component {
                 timer5 = setTimeout(function () {
                     $('#chip5').addClass('indigo white-text');
                 }, 5000);
-            let canvas = this.refs.canvas;
+
+
+            let ths = this;
             setTimeout(function () {
-                let context = canvas.getContext('2d');
-                context.clearRect(0, 0, canvas.width, canvas.height);
-
-                context.fillStyle = "#FFFFFF";
-                context.fillRect(0, 0, canvas.width, canvas.height);
-
-                context.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-                let data = canvas.toDataURL('image/jpeg', 1);
+                let data = ths.refs.webcam.getScreenshot();
                 let ajax = new XMLHttpRequest();
                 ajax.open("POST", 'https://ensign.hthswd.org:8085/process_file', false);
                 ajax.setRequestHeader('Content-Type', 'application/upload');
@@ -106,42 +98,7 @@ export default class LearnContainer extends React.Component {
         }
     }
 
-    loading() {
-        let video = this.refs.video;
-        navigator.mediaDevices.getUserMedia({
-            video: true
-        }, function () {
-        }, function () {
-            let chips = $('.chip');
-            for (let i = 0, il = chips.length; i < il; i++) {
-                chips[i].style.visibility = 'hidden';
-            }
-            let boxes = $('.mybox');
-            for (let i = 0, il = boxes.length; i < il; i++) {
-                boxes[i].style.visibility = 'hidden';
-            }
-            let responseDiv1 = $('#response');
-            responseDiv1.innerHTML = '<br><br><div style="color:#f50057;font-weight:bold;">IMPORTANT!</div><br>You need a webcam to use this feature.<br><br>Please plug a webcam into your<br>computer and refresh the page.';
-            responseDiv1.style.color = 'black';
-        });
-        if (navigator.mediaDevices.getUserMedia) {
-            let thevid = {
-                video: true,
-                audio: false
-            };
-            navigator.mediaDevices.getUserMedia(thevid, handleVideo, forError)
-        }
-
-        function handleVideo(localmediastream) {
-            video.src = window.URL.createObjectURL(localmediastream);
-        }
-
-        function forError(e) {
-        }
-    }
-
     componentDidMount() {
-        this.loading();
         $('.learning-button').click(function (event) {
             $('#image').innerHTML = "<img src='pngs edited/" + event.target.id + ".PNG' width='450px' height='450px'/>";
         });
@@ -179,11 +136,13 @@ export default class LearnContainer extends React.Component {
                                 <Webcam
                                     audio={false}
                                     height={400}
-                                    ref="webcamp"
+                                    ref="webcam"
                                     screenshotFormat="image/jpeg"
                                     width={600}
                                 />
                                 <div className="mybox2" id="box"/>
+                                <video ref="video" className="forVid2" loop autoPlay height="400px" width="600px"/>
+                                <canvas ref="canvas" id="canvas"/>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import LearnButtonsComponent from "../components/LearnButtonsComponent";
-import LearnCameraComponent from "../components/LearnCameraComponent";
 
 let disabled = false;
 
@@ -9,11 +8,12 @@ export default class LearnContainer extends React.Component {
     constructor(props) {
         super(props);
         this.submitDisable = this.submitDisable.bind(this);
+        this.submitImage = this.submitImage.bind(this);
+        this.loading = this.loading.bind(this);
         this.state = {imgID: 'A'};
     }
 
-    submitImage(letter)
-    {
+    submitImage(letter) {
         let rand = 'a';
         let timer1 = null;
         let timer2 = null;
@@ -24,8 +24,7 @@ export default class LearnContainer extends React.Component {
         let responseDiv = null;
         let letterDiv = null;
 
-        if (disabled === false)
-        {
+        if (disabled === false) {
             responseDiv3 = document.getElementById("response2");
             clearTimeout(timer1);
             clearTimeout(timer2);
@@ -49,55 +48,52 @@ export default class LearnContainer extends React.Component {
                 }
                 return data;
             }
-            if (letter === "Practice")
-            {
+
+            if (letter === "Practice") {
                 responseDiv = $('#response2');
                 letterDiv = $('#letterdiv');
             } else {
-                responseDiv = $('#response');
+                responseDiv = this.refs.response1;
             }
-            let canvas = $('#canvas1');
-            let video = $('#forVid1');
-
-            let timer1 = null, timer2 = null, timer3 = null, timer4 = null, timer5 = null;
+            let video = this.refs.video;
 
             if (letter === "Practice") {
                 letterDiv.innerHTML = ('Please make the character ' + rand + '.');
-                timer1 = setTimeout(function() {
+                timer1 = setTimeout(function () {
                     $('#chip6').addClass('indigo white-text');
                 }, 1000);
-                timer2 = setTimeout(function() {
+                timer2 = setTimeout(function () {
                     $('#chip7').addClass('indigo white-text');
                 }, 2000);
-                timer3 = setTimeout(function() {
+                timer3 = setTimeout(function () {
                     $('#chip8').addClass('indigo white-text');
                 }, 3000);
-                timer4 = setTimeout(function() {
+                timer4 = setTimeout(function () {
                     $('#chip9').addClass('indigo white-text');
                 }, 4000);
-                timer5 = setTimeout(function() {
+                timer5 = setTimeout(function () {
                     $('#chip10').addClass('indigo white-text');
                 }, 5000);
             } else {
                 responseDiv.innerHTML = ('Please make the character ' + letter + '.');
-                timer1 = setTimeout(function() {
+                timer1 = setTimeout(function () {
                     $('#chip1').addClass('indigo white-text');
                 }, 1000);
-                timer2 = setTimeout(function() {
+                timer2 = setTimeout(function () {
                     $('#chip2').addClass('indigo white-text');
                 }, 2000);
-                timer3 = setTimeout(function() {
+                timer3 = setTimeout(function () {
                     $('#chip3').addClass('indigo white-text');
                 }, 3000);
-                timer4 = setTimeout(function() {
+                timer4 = setTimeout(function () {
                     $('#chip4').addClass('indigo white-text');
                 }, 4000);
-                timer5 = setTimeout(function() {
+                timer5 = setTimeout(function () {
                     $('#chip5').addClass('indigo white-text');
                 }, 5000);
             }
-
-            setTimeout(function() {
+            let canvas = this.refs.canvas;
+            setTimeout(function () {
                 let context = canvas.getContext('2d');
                 context.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -136,14 +132,12 @@ export default class LearnContainer extends React.Component {
         }
     }
 
-    loading()
-    {
-        let video = $('#forVid1');
-        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-        navigator.getUserMedia({
+    loading() {
+        let video = this.refs.video;
+        navigator.mediaDevices.getUserMedia({
             video: true
-        }, function() {
-        }, function() {
+        }, function () {
+        }, function () {
             let chips = $('.chip');
             for (let i = 0, il = chips.length; i < il; i++) {
                 chips[i].style.visibility = 'hidden';
@@ -156,14 +150,14 @@ export default class LearnContainer extends React.Component {
             responseDiv1.innerHTML = '<br><br><div style="color:#f50057;font-weight:bold;">IMPORTANT!</div><br>You need a webcam to use this feature.<br><br>Please plug a webcam into your<br>computer and refresh the page.';
             responseDiv1.style.color = 'black';
         });
-        if (navigator.getUserMedia)
-        {
+        if (navigator.mediaDevices.getUserMedia) {
             let thevid = {
                 video: true,
                 audio: false
             };
-            navigator.getUserMedia(thevid, handleVideo, forError)
+            navigator.mediaDevices.getUserMedia(thevid, handleVideo, forError)
         }
+
         function handleVideo(localmediastream) {
             video.src = window.URL.createObjectURL(localmediastream);
         }
@@ -184,7 +178,37 @@ export default class LearnContainer extends React.Component {
             <div id="learn" className="col s12">
                 <form method="POST" onSubmit={this.submitImage}>
                     <LearnButtonsComponent submitDisable={this.submitDisable.bind(this)}/>
-                    <LearnCameraComponent imgID={this.state.imgID}/>
+                    <div className="row">
+                        <div className="col s6" id="image">
+                            <img src={"pngs edited/" + this.state.imgID + ".png"} width="450px" height="450px"/>
+                        </div>
+                        <div className="col s6">
+                            <div className="chip pink accent-3 white-text chipLearn">get
+                                ready in
+                            </div>
+                            <div className="chip chip1 chipLearn" id="chip1">
+                                one
+                            </div>
+                            <div className="chip chip2 chipLearn" id="chip2">
+                                two
+                            </div>
+                            <div className="chip chip3 chipLearn" id="chip3">
+                                three
+                            </div>
+                            <div className="chip chip4 chipLearn" id="chip4">
+                                four
+                            </div>
+                            <div className="chip chip5 chipLearn" id="chip5">
+                                five
+                            </div>
+                            <div className="camera">
+                                <div ref="response1" id="response1"/>
+                                <div className="mybox2" id="box"/>
+                                <video ref="video" id="forVid1" loop autoPlay height="400px" width="600px"/>
+                                <canvas ref="canvas" id="canvas" width={600} height={400}/>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         );

@@ -107,7 +107,7 @@ a.btn {
 
 #forVid1 {
   z-index: 1;
-  position:relative;
+  position: relative;
   top: -249px;
   right: 75px
 }
@@ -121,4 +121,8 @@ a.btn {
   position:relative;
   top: -250px;
   width: 109px;
+}
+
+canvas {
+  position: relative;
 }

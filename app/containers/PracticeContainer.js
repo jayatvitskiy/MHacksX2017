@@ -95,13 +95,12 @@ export default class PracticeContainer extends React.Component {
             "H", 'I', "J", 'K', "L", "M", "N", "O", 'P', "Q", 'R', 'S', 'T', 'U', 'V', 'W', "X", 'Y', 'Z'];
         let rand = alphaNumericArray[Math.floor(Math.random() * alphaNumericArray.length)];
         let responseDiv3 = document.getElementById("response2");
-        console.log(this);
         if (this.submitImage('Practice'))
         {
             alphaNumericArray.splice(alphaNumericArray.indexOf(rand), 1); //if user made correct sign, remove rand from array
             rand = alphaNumericArray[Math.floor(Math.random() * alphaNumericArray.length)]; //generate new rand
         }
-
+        let ths = this;
         intervalID = setInterval(function() {
             if ((responseDiv3.innerHTML) === "Correct.")
             {
@@ -110,9 +109,9 @@ export default class PracticeContainer extends React.Component {
             }
 
             if (alphaNumericArray !== null && alphaNumericArray.length >= 1) {
-                this.submitImage('Practice');
+                ths.submitImage('Practice');
             } else {
-                this.stopCount();
+                ths.stopCount();
             }
         }, 8000);
     }

@@ -11,8 +11,7 @@ export default class HomeComponent extends React.Component {
                             <div className="caption left-align">
                                 <br/><br/><br/>
                                 <h3>A Helping Hand</h3>
-                                <h5 className="light grey-text text-lighten-3">a new tool for american sign
-                                    language</h5>
+                                <h5 className="light grey-text text-lighten-3">A handy tool for novice American Sign Language learners</h5>
                             </div>
                         </li>
                         <li>
@@ -20,8 +19,7 @@ export default class HomeComponent extends React.Component {
                             <div className="caption right-align">
                                 <br/><br/><br/>
                                 <h3>Learn ASL</h3>
-                                <h5 className="light grey-text text-lighten-3">using open source computer vision
-                                    technology</h5>
+                                <h5 className="light grey-text text-lighten-3">Using open source computer vision technology</h5>
                             </div>
                         </li>
                         <li>
@@ -29,15 +27,15 @@ export default class HomeComponent extends React.Component {
                             <div className="caption left-align">
                                 <br/><br/><br/>
                                 <h3>Practice Your ASL</h3>
-                                <h5 className="light grey-text text-lighten-3">signing letters and numbers</h5>
+                                <h5 className="light grey-text text-lighten-3">Signalling letters and numbers</h5>
                             </div>
                         </li>
                         <li>
                             <img src="http://cfile6.uf.tistory.com/image/2317924251A4B8BA31E3AF"/>
                             <div className="caption right-align">
                                 <br/><br/><br/>
-                                <h3>Translate From English to ASL</h3>
-                                <h5 className="light grey-text text-lighten-3">english to asl</h5>
+                                <h3>Translate to ASL</h3>
+                                <h5 className="light grey-text text-lighten-3">English to ASL</h5>
                             </div>
                         </li>
                     </ul>
